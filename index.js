@@ -1,3 +1,4 @@
+var myFind = require('./starter-code/myFind')
 var myEach = require('./starter-code/myEach');
 var myMap = require('./starter-code/myMap');
 var myReduce = require('./starter-code/myReduce');
@@ -11,8 +12,18 @@ var myReduce = require('./starter-code/myReduce');
 
   To execute it from the command line, run: `node index.js`
 ***********************************************************************/
-
 var numArray = [0,1,10,100,1000];
+
+/* myFind */
+function greaterThan100 (num) {
+	if (num > 100) {
+		return num;
+	}
+}
+
+console.log(myFind(numArray, greaterThanTen));
+
+
 
 
 /* myEach */

@@ -1,9 +1,13 @@
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Find
 function myFind(arr, callback) {
-
-//  CODE INSIDE HERE   //
-
+	for (var i = 0; i < arr.length; i++) {
+		if (callback(arr[i], i, arr)) {
+			return arr[i];
+		}
+	}
 }
+
+
 
 /*
  Best if you don't code out here.
@@ -18,3 +22,5 @@ function myFind(arr, callback) {
 
 // export this function (you can ignore this for now)
 module.exports = myFind;
+
+
