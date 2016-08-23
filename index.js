@@ -2,6 +2,7 @@ var myFind = require('./starter-code/myFind')
 var myEach = require('./starter-code/myEach');
 var myMap = require('./starter-code/myMap');
 var myReduce = require('./starter-code/myReduce');
+var myFilter = require('./starter-code/myFilter')
 /* *********************************************************************
   You can edit this file.  It is set up to have use of your code in:
 
@@ -63,6 +64,15 @@ console.log('Testing myMap');
 console.log(output);
 console.log(output[0] === "A" && output[1] === "B" && output[2] === "C"); // assertion
 
+
+/* myFilter */
+var input = [1, 2, 3, 4, 5, 6];
+var output = myFilter(input, function isDivByThree(num){
+	return num % 3 ===0;
+});
+
+console.log('Testing myFilter');
+console.log('Expected:', [3, 6], 'Got:', output);
 
 
 
