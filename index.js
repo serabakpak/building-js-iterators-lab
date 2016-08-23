@@ -14,15 +14,19 @@ var myReduce = require('./starter-code/myReduce');
 ***********************************************************************/
 var numArray = [0,1,10,100,1000];
 
+
+//index.js
+
+
 /* myFind */
-function greaterThan100 (num) {
+var input = numArray;
+var output = myFind(input, function greaterThan100 (num) {
 	if (num > 100) {
 		return num;
 	}
-}
-
-console.log(myFind(numArray, greaterThanTen));
-
+});
+console.log('Testing myFind');
+console.log('Expected:', 1000, 'Got:', output);
 
 
 
@@ -32,6 +36,16 @@ console.log(myFind(numArray, greaterThanTen));
 /*myEach(numArray, function print(element, index, arr) {
    console.log('inside myEach', element, index, arr);
  });*/
+var array = [];
+var input = numArray;
+myEach(input, function double (num) {
+	var doubled = num * 2;
+	array.push(doubled);	
+});
+
+console.log('Testing myEach');
+console.log('Expected:', [0,2,20,200,2000], 'Got:', array);
+
 
 
 
