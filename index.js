@@ -33,7 +33,6 @@ console.log('Expected:', 1000, 'Got:', output);
 
 /* myEach */
 
-//
 myEach(numArray, function print(element, index, arr) {
    console.log('inside myEach', element, index, arr);
  });
@@ -74,7 +73,13 @@ var output = myFilter(input, function isDivByThree(num){
 console.log('Testing myFilter');
 console.log('Expected:', [3, 6], 'Got:', output);
 
-
+/* myReduce */
+var input = [1, 2, 3, 4, 5];
+var output = myReduce(input, function sum(previous, current) {
+	return previous + current;
+});
+console.log('Testing myReduce');
+console.log('Expected:', 15, 'Got:', output);
 
 
 console.log("the end of index.js");
